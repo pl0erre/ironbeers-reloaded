@@ -1,68 +1,174 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-## Available Scripts
+# LAB | IronBeers
 
-In the project directory, you can run:
+Since beer is one of the most consumed drinks between Ironhackers 🍻 , our mission here is to create an app to showcase some of the best-handcrafted beers, but not just that - to save some as well so the rest of Ironhack community is informed 😌. Our end goal is creating something like this:
 
-### `npm start`
+<div style="display: flex; justify-content: center">
+<img src="https://user-images.githubusercontent.com/23629340/45887951-2ca0bb80-bdbd-11e8-91a4-08b66d88a7c7.gif" />
+</div>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Requirements
 
-### `npm test`
+- Fork this repo
+- Clone this repo
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Submission
 
-### `npm run build`
+- Upon completion, run the following commands:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  ```
+  git add .
+  git commit -m "done"
+  git push origin master
+  ```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- Create Pull Request so your TAs can check up your work.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Introduction
 
-### `npm run eject`
+We will be building a React app so the API (server) needs to be built somewhere for us, right? You are completely right, it's deployed on *heroku* and the root fo the API is: **`https://ih-beer-api.herokuapp.com/beers`**.
+The available endpoints are the following:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Method | Endpoint | Response (200)     | Action |
+| ------ | -------- | ------------------ | ------ |
+| GET    | /     | [beers]            | Get all the beers from the DB |
+| GET    | /:id | { beer }        | Get the a single/specific beer      |
+| GET    | /random     | { beer }        | Get a random beer from the DB |
+| POST   | /new        | { message: "New beer successfully saved to database!"}| Create a new beer (the fields are specified in the instructions)|
+| GET    | /search?q=`{query}` | [beers] | Get beers from the DB whose name contains the search term. For example `/search?q=lager` searches for all beers with lager in the name. |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+On each iteration, we will explain which endpoint you should use!
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The **IronBeers** project will include the following features:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- A **Home** page with three different options:
+  - *All Beers*
+  - *Random Beer*
+  - *New Beer*
+- A **List Beers** page where you should display all the beers
+- A **Single Beer** page to display the details of the beer the user clicked on
+- A **Random Beer** page to display a Random Beer
+- A **New Beer** page to show a form where a user can create new beers
 
-## Learn More
+## Instructions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:exclamation: At the very beginning we will offer you to shoot for the stars: as a **bonus** focus on **mobile first** design! As we said this is bonus, so it's up to you. :+1:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Iteration 1: Create the App
 
-### Code Splitting
+Well, at this point, this comes natural: we will use `create-react-app` to build a new app. Feel free to name it as you wish, but if you need some inspiration, we called it **Reactive BeersJS**.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Iteration 2: Home Page
 
-### Analyzing the Bundle Size
+Create a **Home Page**. This view should include three links to separate pages:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- `/beers`
+- `/random-beer`
+- `/new-beer`
 
-### Making a Progressive Web App
+Feel free to design it however you wish, but here is how we did it:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<div style="display: flex; justify-content: center">
+<img src="https://user-images.githubusercontent.com/23629340/40706572-933439b8-63ee-11e8-8d65-538fb59f79ab.png" height="600px" />
+</div>
 
-### Advanced Configuration
+### Iteration 3: Header
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+On every view (except for the `home`), we should add a **header** with a `link` to the root of the `app`.
 
-### Deployment
+<div style="display: flex; justify-content: center">
+<img src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png" height="100px" />
+</div>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Iteration 4: List the Beers
 
-### `npm run build` fails to minify
+On the `/beers` route, we should display all the beers from the database. So, in this case, you need to "hit" the API's route `https://ih-beer-api.herokuapp.com/beers` and the API will return an **array of beers**.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+*Hint*: The array of beers is array of objects. We strongly advise you to **console log the response** from the API so you can see the structure of it.
+
+You should display the following from each of the beers:
+  - `image`
+  - `name`
+  - `tagline`
+  - `contributed_by`
+  - **Also, add the link to check the details of each beer. The link should navigate to `/beers/:beerId`.**
+
+<div style="display: flex; justify-content: center">
+<img src="https://user-images.githubusercontent.com/23629340/40706960-96223ade-63ef-11e8-9375-b7b6d091e716.png" height="600px" />
+</div>
+
+The first time you call the API, it might take a bit to respond. It's hosted on Heroku, and it goes to sleep after 30 minutes, you know! :wink:
+
+
+### Iteration 5: Single Beer
+
+When a user click on one of the beers, you should display a detailed view of it, including the following fields:
+
+  - `image`
+  - `name`
+  - `tagline`
+  - `first_brewed`
+  - `attenuation_level`
+  - `description`
+  - `contributed_by`
+
+Again, we **strongly recommend to console log the response from the API**.
+
+<div style="display: flex; justify-content: center">
+<img src="https://user-images.githubusercontent.com/23629340/40707269-84bedd78-63f0-11e8-86c3-b14efb9323a7.png" height="600px" />
+</div>
+
+### Iteration 6: Random Beer
+
+On the `/random-beer` route, we will render a single beer that will be retrieved from the database. The endpoint will do all the job for us, all we need to do is to call `https://ih-beer-api.herokuapp.com/beers/random`. We should receive an object including all the info about a beer.
+The same way we did with the **Single Beer** view, we should render the following fields:
+
+  - `image`
+  - `name`
+  - `tagline`
+  - `first_brewed`
+  - `attenuation_level`
+  - `description`
+  - `contributed_by`
+
+<div style="display: flex; justify-content: center">
+<img src="https://user-images.githubusercontent.com/23629340/40707457-05a22990-63f1-11e8-84b2-a86143b7b821.png" height="600px" />
+</div>
+
+### Iteration 7: Create New Beer
+
+Finally, on the `/new-beer` route (remember, this is you react route, you're displaying the form on this route), we should render a form where user can create new beers. The `form` should include the following fields:
+
+  - **name** - must be type *text*
+  - **tagline** - must be type *text*
+  - **description** - must be type *text*
+  - **first_brewed** - must be type *text*
+  - **brewers_tips** - must be type *text*
+  - **attenuation_level**  - must be type *number* **!!!**
+  - **contributed_by** - must be type *text*
+
+Why we pointed out the type? Well, since we already console log response from the API, we could notice that all the fields are strings but *attenuation_level*, which is number. Using our knowledge from module II, we can make conclusion that in the *beer model* all the properties are type *String* except *attenuation_level*, which is type *Number*.
+When you have built the form, you should do a `POST` request to `https://ih-beer-api.herokuapp.com/beers/new`, passing all the data on the `body` object. If everything went ok, you would receive a **200** response from the server.
+
+Notice that the fields on the `body` should have those specific **names** so the API can create a new beer.
+
+*What could go wrong?*: You inputted string instead of number in the *attenuation_level* field and the server sent you **500** error.
+Since we didn't cover how to upload images yet, don't worry about it now - the API will assign a random image to the new beer. :beer:
+
+
+<div style="display: flex; justify-content: center">
+<img src="https://user-images.githubusercontent.com/23629340/40707877-3c9dad42-63f2-11e8-8c95-4881bbde64a2.png" height="600px" />
+</div>
+
+### (Extra) Bonus Iteration: Filter the Beers
+
+Yes! One endpoint left! On the `/beers` route, add an `input` where users can search for beers. Every time a new letter is typed, you should call to `https://ih-beer-api.herokuapp.com/beers/search?q={query}` passing the value of the input in the `q` param.
+
+**We are done!** :trophy:
+
+Awesome! Grab a beer (if you're not underage :wink: )! Now you are a **React Warrior**, keep training to become the Ninja!
+
+
+Happy coding! :heart:
