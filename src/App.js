@@ -9,6 +9,8 @@ import AllBeers from './Pages/AllBeers';
 import AddBeer from './Pages/AddBeer';
 import RandomBeer from './Pages/RandomBeer';
 
+import BeerDetails from './Components/BeerDetails';
+
 // App
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
       <Route path="/all" component={AllBeers} />
       <Route path="/add" component={AddBeer} />
       <Route path="/random" component={RandomBeer} />
+      <Route path="/details/:id" component={BeerDetails} />
       <footer className="App-footer"></footer>
     </div>
   );

@@ -7,6 +7,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(175, 175, 175, 0.801);
+  padding: 1rem 0;
+  border-radius: 3px;
 }
 
 .beerBox img {
@@ -14,13 +17,15 @@
 }
 
 .beerBox h3 {
-  margin: 0;
+  margin: 0 0.4rem;
+  font-size: 1.4rem;
+  color: rgba(83, 37, 5, 0.911);  
 }
 
 .beerBox h4 {
-  margin: 0;
+  margin: 0.8rem;
 }
 
 .beerBox p {
-  margin: 0;
+  margin: 0.5rem;
 }

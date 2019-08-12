@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 export default class BeerDetails extends Component {
   
   render() {
+    debugger
     return (
       <div className="App-BeerDetails">
         <div className="detailsBox">
