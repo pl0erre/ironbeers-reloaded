@@ -1,0 +1,26 @@
+
+.beerBox {
+  border: 1px solid black;
+  width: 20%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.beerBox img {
+  max-height: 200px;
+}
+
+.beerBox h3 {
+  margin: 0;
+}
+
+.beerBox h4 {
+  margin: 0;
+}
+
+.beerBox p {
+  margin: 0;
+}

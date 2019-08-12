@@ -1,0 +1,29 @@
+.App-BeerDetails {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(204, 204, 204);
+}
+
+.detailsBox {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.detailsBox img {
+  height: 80%;
+  /* border: 1px solid black; */
+}
+
+.details-info {
+  margin: 8rem;
+}
+
+.colored {
+  color: darkgreen;
+}

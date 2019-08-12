@@ -1,0 +1,11 @@
+.App-AllBeers {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(204, 204, 204);
+}
+
+.beerBox-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
