@@ -1,5 +1,5 @@
 .App-RandomBeer {
-  height: 100vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -9,7 +9,7 @@
 
 .detailsBox {
   height: 80vh;
-  width: 70vw;
+  width: 50vw;
   padding: 0 3rem;
   margin: 0 auto;
   display: flex;

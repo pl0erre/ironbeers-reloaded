@@ -1,9 +1,9 @@
 .App-AllBeers {
+  /* height: 95vh; */
   display: flex;
   flex-direction: column;
   background-color: rgb(204, 204, 204);
   background-image: url("https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-
 }
 
 .App-AllBeers h2 {

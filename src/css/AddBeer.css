@@ -1,5 +1,5 @@
 .App-AddBeer {
-  height: 100vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -19,11 +19,13 @@
   height: 30px;
   margin: 0.5rem;
   padding: 0.5rem;
+  background-color: rgba(238, 238, 230, 0.856);
 }
 
 .addBeer-form textarea {
   margin: 0.5rem;
   padding: 0.5rem;
+  background-color: rgba(238, 238, 230, 0.856);
 }
 
 .addBeer-container {
@@ -31,8 +33,11 @@
   margin: 0 auto;
 }
 
+
 .submit-btn {
-  width: 10vw;
+  width: 5vw;
+  background-color: green;
 }
+
 
 
