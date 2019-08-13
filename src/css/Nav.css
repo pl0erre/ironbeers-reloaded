@@ -1,0 +1,53 @@
+.App-nav {
+  background-color: #282c34;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-nav a {
+  margin: 0;
+  padding: 0; 
+  margin: 0.5rem 2.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
+
+.App-nav a :visited {
+  color: white;
+}
+
+.App-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App-nav li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.nav-join {
+  color: rgb(31, 98, 31);
+}
+
+.nav-join:hover {
+  color:  rgb(98, 72, 31);
+}
+
+.user-welcome {
+  color: gold;
+  font-size: 1rem;
+  margin: 0 5rem;
+}

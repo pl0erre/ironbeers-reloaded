@@ -41,6 +41,6 @@
   text-shadow: 1px 1px rgba(95, 95, 95, 0.356);
 }
 
-.App-nav a :visited {
+.beerBox a :visited {
   color: darkgreen;
 }

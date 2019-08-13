@@ -12,6 +12,11 @@
   text-shadow: 2px 6px #00000083;
 }
 
+.addBeer-container {
+  width: 50vw;
+  margin: 0 auto;
+}
+
 .addBeer-form {
   display: flex;
   flex-direction: column;
@@ -24,11 +29,6 @@
   width: 25vw;
   margin: 0.5rem 0;
   background-color: rgba(238, 238, 230, 0.856);
-}
-
-.addBeer-container {
-  width: 50vw;
-  margin: 0 auto;
 }
 
 .addBeer-form .submitBtn {

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import '../css/AllBeers.css';
 import axios from 'axios'
 import BeerItem from '../Components/BeerItem'
+import Nav from "../Components/Nav";
+
 
 export default class AllBeers extends Component {
   
@@ -24,16 +26,18 @@ export default class AllBeers extends Component {
   }
 
   render() {
-    
     return (
-      <div className="App-AllBeers">
-        <h2>Checkout all our beers!</h2>
-        <div className="beerBox-wrapper">
-          {this.state.allBeers.map((beer) =>
-            <BeerItem beer={beer}/>
-          )}
-        </div>
-      </div>   
+      <>
+        <Nav />
+        <div className="App-AllBeers">
+          <h2>Checkout all our beers!</h2>
+          <div className="beerBox-wrapper">
+            {this.state.allBeers.map((beer) =>
+              <BeerItem beer={beer}/>
+            )}
+          </div>
+        </div> 
+      </>
     )
   }
 }

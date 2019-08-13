@@ -3,10 +3,6 @@ import React, {Component} from 'react';
 import './App.css';
 import {Route, Link} from 'react-router-dom';
 
-// Font awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBeer } from '@fortawesome/free-solid-svg-icons';
-
 // Pages
 import Home from './Pages/Home';
 import AllBeers from './Pages/AllBeers';
@@ -40,24 +36,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="App-nav">
-          <Link to="/"><FontAwesomeIcon icon={faBeer} /></Link>
-          <ul>
-            {this.state.user
-              ? 
-              <>
-                <li><Link to="/auth/logout">Logout</Link></li>
-                <li><Link to="/profile">Profile</Link></li>
-                <li><span className="user-welcome">Hello {this.state.user.username}</span></li>
-              </>
-              :
-              <>
-                <li><Link to="/auth/login">Login</Link></li>
-                <li><Link to="/auth/signup"><span  className="nav-join">Join us!</span></Link></li>
-              </>
-            }
-          </ul>
-        </nav>
+
         <Route exact path="/" component={Home} />
         <Route exact path="/all" component={AllBeers} />
         <Route exact path="/add" component={AddBeer} />
@@ -65,7 +44,10 @@ export default class App extends Component {
         <Route exact path="/details/:id" component={BeerDetails} />
         <Route exact path="/auth/login" component={Login} />
         <Route exact path="/auth/signup" component={SignUp} />
-        <Route exact path="/auth/logout" component={Logout} />
+        <ProtectedRoute 
+          redirectUrl='/auth/login'
+          path="/auth/logout" 
+          component={Logout} />
         <ProtectedRoute 
           redirectUrl='/auth/login' 
           path="/profile" 

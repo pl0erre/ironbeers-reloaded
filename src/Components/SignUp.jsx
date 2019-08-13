@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "../css/SignUp.css";
+import Nav from '../Components/Nav';
 
 import Auth from "../Utils/Auth";
 const auth = new Auth();
+
 
 export default class SignUp extends Component {
   
@@ -24,17 +26,14 @@ export default class SignUp extends Component {
   }
 
   handleFormSubmit = event => {
-    debugger
     event.preventDefault();
     auth
       .signup(this.state.user)
       .then(() => {
-        debugger
         this.setState({ error: "" });
         this.props.history.push("/");
       })
       .catch((err) => {
-        debugger
         this.setState({ error: err.message });
       });
   };
@@ -49,54 +48,57 @@ export default class SignUp extends Component {
 
   render() {
     return (
-      <div className="App-SignUp">
-        <div className="signup-container">
-          <h2>Be(er) part of the community!</h2>
+      <>
+        <Nav />
+        <div className="App-SignUp">
+          <div className="signup-container">
+            <h2>Be(er) part of the community!</h2>
 
-          <form className="signup-form" onSubmit={this.handleFormSubmit}>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={this.state.user.username}
-              onChange={this.handleFormChange}
-            />
+            <form className="signup-form" onSubmit={this.handleFormSubmit}>
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                value={this.state.user.username}
+                onChange={this.handleFormChange}
+              />
 
-            <input
-              type="text"
-              name="firstname"
-              placeholder="Firstname"
-              value={this.state.user.firstname}
-              onChange={this.handleFormChange}
-            />
+              <input
+                type="text"
+                name="firstname"
+                placeholder="Firstname"
+                value={this.state.user.firstname}
+                onChange={this.handleFormChange}
+              />
 
-            <input
-              type="text"
-              name="lastname"
-              placeholder="Lastname"
-              value={this.state.user.lastname}
-              onChange={this.handleFormChange}
-            />
+              <input
+                type="text"
+                name="lastname"
+                placeholder="Lastname"
+                value={this.state.user.lastname}
+                onChange={this.handleFormChange}
+              />
 
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={this.state.user.password}
-              onChange={this.handleFormChange}
-            />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={this.state.user.password}
+                onChange={this.handleFormChange}
+              />
 
-            <input
-              type="email"
-              name="email"
-              placeholder="E-Mail"
-              value={this.state.user.email}
-              onChange={this.handleFormChange}
-            />
-            <input className="submitBtn" type="submit" name="Submit"/>
-          </form>
+              <input
+                type="email"
+                name="email"
+                placeholder="E-Mail"
+                value={this.state.user.email}
+                onChange={this.handleFormChange}
+              />
+              <input className="submitBtn" type="submit" name="Submit"/>
+            </form>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 }
