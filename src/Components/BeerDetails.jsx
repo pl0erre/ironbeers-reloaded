@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../css/BeerDetails.css'
-import {Link} from 'react-router-dom';
 
 export default class BeerDetails extends Component {
   
@@ -17,7 +16,6 @@ export default class BeerDetails extends Component {
             <p>Contributed by: <span className="colored">{this.props.location.state.beer.contributed_by}</span></p>
           </div>
         </div>
-        <Link to="/">Home</Link>
       </div>
     )
   }

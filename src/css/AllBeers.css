@@ -2,14 +2,17 @@
   /* height: 95vh; */
   display: flex;
   flex-direction: column;
-  background-color: rgb(204, 204, 204);
   background-image: url("https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 
 .App-AllBeers h2 {
-  color: rgb(214, 214, 214);
   font-size: 3rem;
-  font-weight: 400;
+  margin: 0;
+  padding: 1rem 2rem;
+  color: rgb(146, 95, 1);
+  text-shadow: 2px 6px #00000083;
+  cursor: default;
+  user-select: none;
 }
 
 .beerBox-wrapper {

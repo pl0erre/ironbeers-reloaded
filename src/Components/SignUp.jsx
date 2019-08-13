@@ -51,7 +51,7 @@ export default class SignUp extends Component {
     return (
       <div className="App-SignUp">
         <div className="signup-container">
-          <h2>Be(er) part of the community</h2>
+          <h2>Be(er) part of the community!</h2>
 
           <form className="signup-form" onSubmit={this.handleFormSubmit}>
             <input
@@ -93,7 +93,7 @@ export default class SignUp extends Component {
               value={this.state.user.email}
               onChange={this.handleFormChange}
             />
-            <input className="submit-btn" type="submit" />
+            <input className="submitBtn" type="submit" name="Submit"/>
           </form>
         </div>
       </div>

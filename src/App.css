@@ -7,10 +7,15 @@
   height: 5vh;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.nav-join {
+  color: rgb(31, 98, 31);
+  
 }
 
 .App-nav a {
@@ -22,7 +27,11 @@
   color: white;
 }
 
-.App-nav a:visited {
+.nav-join:hover {
+  color:  rgb(98, 72, 31);
+}
+
+.App-nav a :visited {
   color: white;
 }
 
@@ -34,18 +43,10 @@
 
 .App-nav li {
   display: inline;
-
+  margin: 0;
+  padding: 0;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

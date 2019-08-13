@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(175, 175, 175, 0.801);
+  background-color: rgba(155, 155, 145, 0.767);
   padding: 1rem 0;
   border-radius: 3px;
 }
@@ -28,4 +28,19 @@
 
 .beerBox p {
   margin: 0.5rem;
+}
+
+.beerBox a {
+  margin: 0;
+  padding: 0; 
+  margin: 0.5rem 2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: darkgreen;
+  font-weight: 600;
+  text-shadow: 1px 1px rgba(95, 95, 95, 0.356);
+}
+
+.App-nav a :visited {
+  color: darkgreen;
 }

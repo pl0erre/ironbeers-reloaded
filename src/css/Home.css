@@ -11,7 +11,11 @@
 .App-Home h1 {
   font-size: 4rem;
   margin: 0;
+  padding: 1rem 2rem;
   color: rgb(146, 95, 1);
+  text-shadow: 2px 6px #00000083;
+  cursor: default;
+  user-select: none;
 }
 
 .App-Home a {
@@ -23,40 +27,67 @@
   background-image: url("http://www.crystalbeerparlor.com/blog/wp-content/uploads/2014/05/beers-header.jpg");
   background-size: cover;
   background-position: center;
-  width: 600px;
-  height: 200px;
+  width: 30vw;
+  height: 20vh;
   border: 10px solid rgba(83, 37, 5, 0.911);
+  border-radius: 0 100px 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   color: rgb(255, 255, 255);
+  text-shadow: 2px 2px #00000044;
   font-weight: 300;
+  filter: sepia(0.5);
+}
+
+.img-container-1:hover {
+  filter: sepia(0.1);
+  filter: saturate(85%);
+  font-size: 3.1rem;  
 }
 
 .img-container-2 {
   background-image: url("https://jameshobsonblog.files.wordpress.com/2013/04/21.jpg");
   background-size: cover;
   background-position: center;
-  width: 600px;
-  height: 200px;
+  width: 30vw;
+  height: 20vh;
   border: 10px solid rgba(83, 37, 5, 0.911);
+  border-radius: 0 100px 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   color: rgb(255, 255, 255);
+  text-shadow: 2px 2px #00000044;
   font-weight: 300;
+  filter: sepia(0.5);
+}
+
+.img-container-2:hover {
+  filter: sepia(0.1);
+  filter: saturate(85%);
+  font-size: 3.1rem;
 }
 
 .img-container-3 {
   background-image: url("https://indebuurt.nl/utrecht/wp-content/uploads/2018/05/alcohol-alcoholic-ale-681847.jpg");
   background-size: cover;
   background-position: center;
-  width: 600px;
-  height: 200px;
+  width: 30vw;
+  height: 20vh;
   border: 10px solid rgba(83, 37, 5, 0.911);
+  border-radius: 0 100px 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   color: rgb(255, 255, 255);
+  text-shadow: 2px 2px #00000044;
   font-weight: 300;
+  filter: sepia(0.5);
+}
+
+.img-container-3:hover {
+  filter: sepia(0.1);
+  filter: saturate(85%);
+  font-size: 3.1rem;
 }

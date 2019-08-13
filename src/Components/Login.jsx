@@ -41,6 +41,7 @@ export default class Login extends Component {
     return (
       <div className="App-Login">
         <div className="login-container">
+          <h2>Login</h2>
           <form className="login-form" onSubmit={this.handleFormSubmit}>
             <input  type="text" 
                     name="username" 
@@ -52,7 +53,7 @@ export default class Login extends Component {
                     placeholder="Password"
                     value={this.state.password}
                     onChange={this.handleFormChange} />
-            <input  className="submit-btn" type="submit" />
+            <input  className="submitBtn" type="submit" />
           </form>
         </div>
         

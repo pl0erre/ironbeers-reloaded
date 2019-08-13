@@ -1,3 +1,13 @@
+.App-SignUp {
+  background-image: url("https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.App-SignUp h2 {
+  font-size: 2rem;
+  color: rgb(146, 95, 1);
+  text-shadow: 2px 6px #00000083;
+}
+
 .signup-form {
   display: flex;
   flex-direction: column;
@@ -6,11 +16,10 @@
 }
 
 .signup-form input {
-  width: 30vw;
-  height: 30px;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  background-color: rgba(238, 238, 230, 0.856);
+  height: 4vh;
+  width: 25vw;
+  margin: 0.5rem 0;
+  background-color: rgba(238, 238, 230, 0.856);;
 }
 
 .signup-container {
@@ -23,9 +32,13 @@
   align-items: center;
 }
 
-.submit-btn {
-  width: 5vw;
-  background-color: green;
+.login-form .submitBtn {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 1rem;
+  width: 10vw;
+  background-color: rgb(42, 119, 42);
+  text-shadow: 2px 1px rgba(255, 255, 255, 0.103);
 }
 
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import '../css/AllBeers.css';
-import {Link} from 'react-router-dom';
 import axios from 'axios'
 import BeerItem from '../Components/BeerItem'
 
@@ -34,29 +33,7 @@ export default class AllBeers extends Component {
             <BeerItem beer={beer}/>
           )}
         </div>
-        <Link to="/">Home</Link>
       </div>   
     )
   }
 }
-
-
-
-// {props.countriesArr.map((country)=> {
-
-//   return(
-
-//     <div className="Country-container">
-
-//       <Link to={`/details/${country.cca3}`}>
-//         <div className="single-country" key={country.id}>
-//           <p>{country.flag.normalize()}</p>
-//           <h4>{country.name.common}</h4>
-//         </div>
-//       </Link>
-      
-//     </div>
-//   )
-
-// })
-// }

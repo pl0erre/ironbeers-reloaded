@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../css/AddBeer.css';
-import {Link} from 'react-router-dom';
 import qs from "querystring";
 import axios from "axios";
 
@@ -15,8 +14,7 @@ export default class AddBeer extends Component {
         brewers_tips: '',
         contributed_by: '',
         attenuation_level: '',
-        description: '',
-        image_url:''
+        description: ''
       }
 
       this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -53,57 +51,43 @@ export default class AddBeer extends Component {
      
       <div className="App-AddBeer">
         <div className="addBeer-container">
-
+        <h2>Add a beer to th collection!</h2>
         <form className="addBeer-form" onSubmit={this.handleFormSubmit}>
-          <div>
             <input  type="text" 
                     name="name" 
                     placeholder="Name" 
                     value={this.state.name} 
                     onChange={this.handleFormChange} />
-          </div>
 
-          <div>
             <input  type="text" 
                     name="tagline" 
                     placeholder="Tagline" 
                     value={this.state.tagline} 
                     onChange={this.handleFormChange} />
-          </div>
 
-          <div>
             <input  type="date" 
-                    name="first_brewed" 
-                    // placeholder="First brewed" 
+                    name="first_brewed"
                     checked={this.state.first_brewed} 
                     onChange={this.handleFormChange} />
-          </div>
 
-          <div>
             <input  type="text" 
                     name="brewers_tips" 
                     placeholder="Brewers tips" 
                     checked={this.state.first_brewed} 
                     onChange={this.handleFormChange} />
-          </div>
 
-          <div>
             <input  type="text" 
                     name="contributed_by" 
                     placeholder="Contributed by" 
                     checked={this.state.first_brewed}
                     onChange={this.handleFormChange} />
-          </div>
 
-          <div>
             <input  type="number" 
                     name="attenuation_level" 
                     placeholder="Attenuation level" 
                     checked={this.state.first_brewed} 
                     onChange={this.handleFormChange} />
-          </div>
 
-          <div>
             <textarea   rows="6" 
                         cols="60" 
                         type="text" 
@@ -111,25 +95,13 @@ export default class AddBeer extends Component {
                         placeholder="Description" 
                         value={this.state.description} 
                         onChange={this.handleFormChange} />
-          </div>
 
-          <div>
-            <input  type="url"
-                    name="image_url"
-                    placeholder="Image url"
-                    checked={this.state.image_url}
-                    onchange={this.handleFormChange} />
-          </div>
-
-          <div>
             <input  type="submit" 
-                    value="Submit" />
-          </div>
+                    value="Submit"
+                    className="submitBtn" />
 
           </form>
         </div>
-
-        <Link to="/">Home</Link>
       </div>
     )
   }
