@@ -50,3 +50,9 @@
 .App-link {
   color: #61dafb;
 }
+
+.user-welcome {
+  font-size: 1rem;
+  margin: 0 2rem;
+  color: gold;
+}
